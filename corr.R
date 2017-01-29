@@ -18,8 +18,9 @@ corr <- function(directory, threshold=0){
  my.correlation = c() 
   my.count = 0
   for(i in my.sample){
+    my.step = i
     my.count = my.count + 1
-    my.data = specdata.extract(i, my.directory)
+    my.data = specdata.extract(my.step, my.directory)
     my.correlation[my.count] = cor(my.data$sulfate,my.data$nitrate, use= "na.or.complete")
     
     }

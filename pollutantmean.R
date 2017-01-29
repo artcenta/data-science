@@ -17,7 +17,8 @@ pollutantmean <- function(directory, polluant,id=1:332){
   my.dataset = c()
   my.count = 0
   for(i in my.slice){
-    my.data = specdata.extract(i, my.directory)
+    my.step = i
+    my.data = specdata.extract(my.step, my.directory)
     my.sample = my.data[[my.column]]
     my.clean = na.omit(my.sample)
     if(length(my.clean) > 0){

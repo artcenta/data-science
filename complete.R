@@ -17,7 +17,7 @@ complete <- function(directory, id=1:332){
   for(i in my.slice){
     my.step = i
     my.count = my.count + 1
-    my.data = specdata.extract(i, my.directory)
+    my.data = specdata.extract(my.step, my.directory)
     my.complete = sum(complete.cases(my.data))
     my.dataset[my.step,] = na.omit(c(my.step,my.complete))
     
